@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29609.76
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lottery.Api", "Lottery.Api\Lottery.Api.csproj", "{92D067BA-367A-4F9E-873E-CEBE8334E3B7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{A6BB3160-3231-47D6-9CFB-02FFCEE175AC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{D4408C6D-6F31-4626-BF57-118A7B9040B0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lottery.Api.Test", "Lottery.Api.Test\Lottery.Api.Test.csproj", "{1C2096FF-6FF2-4A61-BF66-6E760029321F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lottery.UI", "Lottery.UI\Lottery.UI.csproj", "{75656684-F3E8-44AC-A804-CC9731786D8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lottery.Contracts", "Lottery.Contracts\Lottery.Contracts.csproj", "{7C3EA5D9-283E-4EE6-85FD-3FC08D4A9480}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92D067BA-367A-4F9E-873E-CEBE8334E3B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92D067BA-367A-4F9E-873E-CEBE8334E3B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92D067BA-367A-4F9E-873E-CEBE8334E3B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92D067BA-367A-4F9E-873E-CEBE8334E3B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C2096FF-6FF2-4A61-BF66-6E760029321F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C2096FF-6FF2-4A61-BF66-6E760029321F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C2096FF-6FF2-4A61-BF66-6E760029321F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C2096FF-6FF2-4A61-BF66-6E760029321F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75656684-F3E8-44AC-A804-CC9731786D8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75656684-F3E8-44AC-A804-CC9731786D8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75656684-F3E8-44AC-A804-CC9731786D8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75656684-F3E8-44AC-A804-CC9731786D8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C3EA5D9-283E-4EE6-85FD-3FC08D4A9480}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C3EA5D9-283E-4EE6-85FD-3FC08D4A9480}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C3EA5D9-283E-4EE6-85FD-3FC08D4A9480}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C3EA5D9-283E-4EE6-85FD-3FC08D4A9480}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{92D067BA-367A-4F9E-873E-CEBE8334E3B7} = {A6BB3160-3231-47D6-9CFB-02FFCEE175AC}
+		{1C2096FF-6FF2-4A61-BF66-6E760029321F} = {D4408C6D-6F31-4626-BF57-118A7B9040B0}
+		{75656684-F3E8-44AC-A804-CC9731786D8F} = {A6BB3160-3231-47D6-9CFB-02FFCEE175AC}
+		{7C3EA5D9-283E-4EE6-85FD-3FC08D4A9480} = {A6BB3160-3231-47D6-9CFB-02FFCEE175AC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {10ADFA1D-AF6F-4D7B-B4DB-39C9F257A223}
+	EndGlobalSection
+EndGlobal
