@@ -1,14 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Net.Http;
-using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace Lottery.UI
 {
     internal static class Program
     {
+        private const int MAX_BALL_COUNT = 49;
+
         private static async Task Main(string[] args)
         {
             await ProcessLottery();
@@ -81,17 +81,20 @@ namespace Lottery.UI
                 return null;
             }
 
-            try
+            string queryString = new System.Uri(uriString).Query;
+            var queryDictionary = System.Web.HttpUtility.ParseQueryString(queryString);
+            var ballCount = Convert.ToInt16(queryDictionary["ballCount"]);
+
+            if (ballCount <= 0 || ballCount >= MAX_BALL_COUNT)
             {
-                config = new Config()
-                {
-                    LotteryApiEndPoint = uri,
-                };
+                Log($"Invalid config value for 'LotteryApiEndPoint'. ballCount query parameter must be set between 1 and 48. Found: '{uriString}'. Please update ballCount with valid value and then retry");
+                return null;
             }
-            catch (Exception ex)
+
+            config = new Config()
             {
-                Log($"Failed to read config: {ex.Message}");
-            }
+                LotteryApiEndPoint = uri,
+            };
 
             return config;
         }
@@ -129,7 +132,7 @@ namespace Lottery.UI
 
         private static void Log(string message)
         {
-            Console.WriteLine($"{DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss")} - {message}");
+            Console.WriteLine(message);
         }
     }
 }

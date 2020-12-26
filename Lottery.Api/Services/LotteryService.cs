@@ -9,8 +9,8 @@ namespace Lottery.Api.Services
     /// </summary>
     public class LotteryService : ILotteryService
     {
-        private const int min = 1;
-        private const int max = 49;
+        private const int MIN_BALL_COUNT = 1;
+        private const int MAX_BALL_COUNT = 49;
 
         /// <summary>
         /// This api will be responsible for Generating non-repeating set of lottery numbers based on given non zero ball counts
@@ -20,7 +20,7 @@ namespace Lottery.Api.Services
         public Contracts.Lottery GenerateLotteryNumbers(int ballCount)
         {
             // validate
-            if (ballCount <= 0 || ballCount >= max)
+            if (ballCount <= 0 || ballCount >= MAX_BALL_COUNT)
             {
                 throw new InvalidOperationException();
             }
@@ -30,7 +30,7 @@ namespace Lottery.Api.Services
             var Random = new Random();
             while (numbers.Count < ballCount)
             {
-                numbers.Add(Random.Next(min, max));
+                numbers.Add(Random.Next(MIN_BALL_COUNT, MAX_BALL_COUNT));
             }
 
             // add them in a list to make use of LINQ sort functionality
